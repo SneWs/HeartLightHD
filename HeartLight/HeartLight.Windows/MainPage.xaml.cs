@@ -45,7 +45,7 @@ namespace HeartLight
 
     public class PageDataContext : INotifyPropertyChanged
     {
-        private int _currentLevel = 3;
+        private int _currentLevel = 1;
         private int _numberOfLevels = 3;
 
         public Player Player { get; set; }
