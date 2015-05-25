@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HeartLight", "HeartLight", "{3E2B636A-495D-44A3-B5E9-EF26DAFBB2D1}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HeartLight.Shared", "HeartLight\HeartLight.Shared\HeartLight.Shared.shproj", "{BE0C935A-0A3A-42CA-8091-C84C7F86DCC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeartLight.Windows", "HeartLight\HeartLight.Windows\HeartLight.Windows.csproj", "{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeartLight.WindowsPhone", "HeartLight\HeartLight.WindowsPhone\HeartLight.WindowsPhone.csproj", "{05B1E89B-B535-4187-94E7-9FB653A245DF}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		HeartLight\HeartLight.Shared\HeartLight.Shared.projitems*{28d74bec-5362-4b3d-9b5f-5c721b51f51c}*SharedItemsImports = 4
+		HeartLight\HeartLight.Shared\HeartLight.Shared.projitems*{05b1e89b-b535-4187-94e7-9fb653a245df}*SharedItemsImports = 4
+		HeartLight\HeartLight.Shared\HeartLight.Shared.projitems*{be0c935a-0a3a-42ca-8091-c84c7f86dcc8}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release_LevelEditor|ARM = Release_LevelEditor|ARM
+		Release_LevelEditor|x64 = Release_LevelEditor|x64
+		Release_LevelEditor|x86 = Release_LevelEditor|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Debug|ARM.ActiveCfg = Debug|ARM
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Debug|ARM.Build.0 = Debug|ARM
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Debug|ARM.Deploy.0 = Debug|ARM
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Debug|x64.ActiveCfg = Debug|x64
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Debug|x64.Build.0 = Debug|x64
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Debug|x64.Deploy.0 = Debug|x64
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Debug|x86.ActiveCfg = Debug|x86
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Debug|x86.Build.0 = Debug|x86
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Debug|x86.Deploy.0 = Debug|x86
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release_LevelEditor|ARM.ActiveCfg = Release_LevelEditor|Win32
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release_LevelEditor|ARM.Build.0 = Release_LevelEditor|ARM
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release_LevelEditor|ARM.Build.2 = Release_LevelEditor|Win32
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release_LevelEditor|ARM.Deploy.0 = Release_LevelEditor|ARM
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release_LevelEditor|x64.ActiveCfg = Release_LevelEditor|x64
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release_LevelEditor|x64.Build.0 = Release_LevelEditor|x64
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release_LevelEditor|x64.Deploy.0 = Release_LevelEditor|x64
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release_LevelEditor|x86.ActiveCfg = Release_LevelEditor|x86
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release_LevelEditor|x86.Build.0 = Release_LevelEditor|x86
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release_LevelEditor|x86.Deploy.0 = Release_LevelEditor|x86
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release|ARM.ActiveCfg = Release|ARM
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release|ARM.Build.0 = Release|ARM
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release|ARM.Deploy.0 = Release|ARM
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release|x64.ActiveCfg = Release|x64
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release|x64.Build.0 = Release|x64
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release|x64.Deploy.0 = Release|x64
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release|x86.ActiveCfg = Release|x86
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release|x86.Build.0 = Release|x86
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C}.Release|x86.Deploy.0 = Release|x86
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Debug|ARM.ActiveCfg = Debug|ARM
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Debug|ARM.Build.0 = Debug|ARM
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Debug|ARM.Deploy.0 = Debug|ARM
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Debug|x86.ActiveCfg = Debug|x86
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Debug|x86.Build.0 = Debug|x86
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Debug|x86.Deploy.0 = Debug|x86
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Release_LevelEditor|ARM.ActiveCfg = Release_LevelEditor|Win32
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Release_LevelEditor|ARM.Deploy.0 = Release_LevelEditor|ARM
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Release_LevelEditor|x64.ActiveCfg = Release_LevelEditor|Any CPU
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Release_LevelEditor|x86.ActiveCfg = Release_LevelEditor|x86
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Release_LevelEditor|x86.Deploy.0 = Release_LevelEditor|x86
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Release|ARM.ActiveCfg = Release|ARM
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Release|ARM.Build.0 = Release|ARM
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Release|ARM.Deploy.0 = Release|ARM
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Release|x64.ActiveCfg = Release|Any CPU
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Release|x86.ActiveCfg = Release|x86
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Release|x86.Build.0 = Release|x86
+		{05B1E89B-B535-4187-94E7-9FB653A245DF}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BE0C935A-0A3A-42CA-8091-C84C7F86DCC8} = {3E2B636A-495D-44A3-B5E9-EF26DAFBB2D1}
+		{28D74BEC-5362-4B3D-9B5F-5C721B51F51C} = {3E2B636A-495D-44A3-B5E9-EF26DAFBB2D1}
+		{05B1E89B-B535-4187-94E7-9FB653A245DF} = {3E2B636A-495D-44A3-B5E9-EF26DAFBB2D1}
+	EndGlobalSection
+EndGlobal

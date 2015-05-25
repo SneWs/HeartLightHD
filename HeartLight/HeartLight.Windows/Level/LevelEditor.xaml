@@ -1,0 +1,80 @@
+﻿<Page
+    x:Class="HeartLight.Level.LevelEditor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
+    mc:Ignorable="d">
+
+    <Grid x:Name="RootGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <MediaElement x:Name="BackgroundVideo" 
+                      AutoPlay="True" 
+                      Source="../Assets/Movies/menu_background.wmv" 
+                      HorizontalAlignment="Stretch" 
+                      VerticalAlignment="Stretch" 
+                      Stretch="UniformToFill"
+                      MediaEnded="BackgroundVideo_OnMediaEnded"/>
+
+        <canvas:CanvasAnimatedControl x:Name="CanvasArea"
+                                      ClearColor="Transparent"
+                                      CreateResources="OnCanvasCreateResources"
+                                      Update="OnCanvasUpdate"
+                                      Draw="OnCanvasDraw"
+                                      IsFixedTimeStep="False"
+                                      AllowDrop="True" />
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="12,12" 
+                    HorizontalAlignment="Right" VerticalAlignment="Top" 
+                    MaxHeight="48">
+            
+            <TextBlock Text="Width" Margin="12,4" />
+            <TextBox x:Name="BlockWidth" Text="20" VerticalAlignment="Top" Height="22" 
+                     InputScope="Number"
+                     Margin="12,4,24,4" TextChanged="OnNumberOfBlocksChanged" IsTabStop="False" />
+
+            <TextBlock Text="Height" Margin="12,4" />
+            <TextBox x:Name="BlockHeight" Text="12" VerticalAlignment="Top" Height="22" 
+                     InputScope="Number"
+                     Margin="12,4,24,4" TextChanged="OnNumberOfBlocksChanged" IsTabStop="False" />
+
+            <AppBarSeparator />
+
+            <TextBlock Text="Author Name" Margin="12,4" />
+            <TextBox x:Name="AuthorName" Text="" 
+                     MinWidth="300" InputScope="Default"
+                     Margin="12,4,24,4" VerticalAlignment="Top" Height="22" IsTabStop="False" />
+
+            <TextBlock Text="Author Email" Margin="12,4" />
+            <TextBox x:Name="AuthorEmail" Text="" 
+                     MinWidth="300" InputScope="EmailSmtpAddress"
+                     Margin="12,4,24,4" VerticalAlignment="Top" Height="22" IsTabStop="False" />
+
+            <AppBarSeparator />
+            <Button Click="OnSaveLevel" IsTabStop="False">
+                <TextBlock Text="Save Level" />
+            </Button>
+            <Button Click="OnOpenLevel" IsTabStop="False">
+                <TextBlock Text="Open Level" />
+            </Button>
+
+        </StackPanel>
+    </Grid>
+    
+    <Page.TopAppBar>
+        <AppBar IsEnabled="True" x:Name="BlockTypesMenu">
+            <AppBarButton x:Name="SolidWall" Label="Wall" ClickMode="Release" Click="OnSolidWallBlockSelected">
+                <Image Stretch="UniformToFill" Source="../Assets/Images/StoneWall_1024x1024.png" Width="72" />
+            </AppBarButton>
+        </AppBar>
+    </Page.TopAppBar>
+</Page>

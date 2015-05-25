@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>be0c935a-0a3a-42ca-8091-c84c7f86dcc8</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>HeartLight</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)GameComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DebugRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameMenuItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\Level.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\LevelData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\LevelLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\LevelLoadResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\Objects\Block.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\Objects\Door.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\Objects\ObjectTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game\Player.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\DpiHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\PointExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IDrawable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IInputConsumer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IUpdatable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MenuRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SoundEffect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UpdateInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Images\Bomb_1024x1024.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Images\BrickWall_1024x1024.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Images\DoorOpen_1024x1024.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Images\Door_1024x1024.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Images\Explosion_1024x1024.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Images\Grass_1024x1024.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Images\Heart_1024x1024.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Images\Player_Left.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Images\Player_Right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Images\StoneWall_1024x1024.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Images\Stone_1024x1024.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Movies\all_levels_completed.wmv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Movies\level_background.wmv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Movies\menu_background.wmv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Sound\Applause.wav" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Sound\BackgroundMusic.wav" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Sound\DoorOpen.wav" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Sound\Explosion.wav" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Sound\HeartTaken.wav" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Sound\StoneImpact.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Levels\Classic\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Levels\New\Level001.lvl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Levels\New\Level002.lvl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Levels\New\Level003.lvl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

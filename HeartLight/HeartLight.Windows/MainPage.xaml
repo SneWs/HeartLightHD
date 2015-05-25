@@ -1,0 +1,112 @@
+﻿<Page
+    x:Class="HeartLight.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <MediaElement x:Name="BackgroundVideo" 
+                      AutoPlay="True" 
+                      Source="Assets/Movies/menu_background.wmv" 
+                      HorizontalAlignment="Stretch" 
+                      VerticalAlignment="Stretch" 
+                      Stretch="UniformToFill"
+                      MediaEnded="BackgroundVideo_OnMediaEnded"/>
+
+        <canvas:CanvasAnimatedControl x:Name="CanvasArea" 
+                                      ClearColor="Transparent"
+                                      CreateResources="OnCanvasCreateResources" 
+                                      Update="OnCanvasUpdate"
+                                      Draw="OnCanvasDraw" 
+                                      IsFixedTimeStep="False" />
+
+
+        <Grid x:Name="BottomScoreArea" 
+              Background="Transparent" 
+              VerticalAlignment="Bottom" 
+              Margin="12, 12"
+              HorizontalAlignment="Center" 
+              Visibility="Collapsed">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                <TextBlock x:Name="NrOfTakenHearts" Text="{Binding Player.Score}"
+                       FontSize="36" 
+                       Foreground="White" Padding="24,0" />
+                
+                <Image Source="Assets/Images/Heart_1024x1024.png"
+                       Stretch="Uniform" Width="32" />
+
+                <TextBlock x:Name="NrOfAvailableHearts" Text="{Binding LevelData.NumberOfHearts}"
+                       FontSize="36" 
+                       Foreground="White" Padding="24,0" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="1">
+                <TextBlock FontSize="36" Foreground="White">
+                    <Run Text="          Level " />
+                    <Run Text="{Binding CurrentLevel}" />
+                    <Run Text="/" />
+                    <Run Text="{Binding NumberOfLevels}" />
+                </TextBlock>
+            </StackPanel>
+
+            <!--<StackPanel VerticalAlignment="Top" HorizontalAlignment="Stretch" Orientation="Horizontal" Grid.Column="2">
+                
+                <ProgressBar x:Name="EnergyBar" Minimum="0" Maximum="300" Value="200" Background="Transparent"   
+                             Margin="24,12,24,0" Height="24" HorizontalAlignment="Stretch" Width="350" BorderBrush="White" BorderThickness="1">
+                    
+                    <ProgressBar.Foreground>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Offset="0" Color="Red"/>
+                            <GradientStop Offset=".5" Color="Yellow"/>
+                            <GradientStop Offset="1" Color="Green"/>
+                        </LinearGradientBrush>
+                    </ProgressBar.Foreground>
+                    
+                </ProgressBar>
+            </StackPanel>-->
+
+        </Grid>
+
+        <MediaElement x:Name="BackgroundSoundPlayer" 
+                      AudioCategory="GameMedia" 
+                      AutoPlay="False" 
+                      Source="Assets/Sound/BackgroundMusic.wav" 
+                      Visibility="Collapsed" />
+
+        <MediaElement x:Name="HeartTakenSound" 
+                      AudioCategory="GameEffects" 
+                      AutoPlay="False" 
+                      Source="Assets/Sound/HeartTaken.wav" 
+                      Visibility="Collapsed" />
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar IsRightTapEnabled="True">
+            <AppBarButton Icon="Pin" Label="Restart Level" Click="OnPlayerManualRestartOfLevel" />
+            <AppBarButton Icon="Pin" Label="Toggle Debug Outlines" Click="OnToggleOutlineDebug" />
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

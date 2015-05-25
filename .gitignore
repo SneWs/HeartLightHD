@@ -1,0 +1,16 @@
+*.suo
+*.user
+*.sdf
+*.opensdf
+*.obj
+*.exe
+*.dll
+*.lib
+
+
+# Folders
+packages/*
+**/obj/*
+**/bin/*
+
+**/ipch/*
