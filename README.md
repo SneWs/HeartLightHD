@@ -12,10 +12,8 @@ C# with Win2D targeting the Windows modern platform. It can be built for Windows
 
 Win2D is an easy-to-use Windows Runtime API for hardware accelerated immediate mode 2D graphics rendering. See https://github.com/Microsoft/Win2D for details. 
 
+## Screenshots
+![Alt text](https://raw.githubusercontent.com/SneWs/HeartLightHD/master/Screenshot001.png "Screenshot 001")
+
 ## Have any questions?
 Well, any questions you might have, I will provide you with the answer right now. _Use the source, Luke._
-
-
-## Screenshots
-
-![Alt text](https://raw.githubusercontent.com/SneWs/HeartLightHD/master/Screenshot001.png "Screenshot 001")
