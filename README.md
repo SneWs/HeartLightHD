@@ -5,7 +5,7 @@ The game is a HeartLight clone. See http://en.wikipedia.org/wiki/Heartlight_%28g
 It also contains a very very simple level editor and the first three levels.
 
 ## NOTES
-The code is quite messy and lacks is quite a few places, but it does work and you can play it as soon as you've built it yourself :)
+The code is quite messy and lacks quite a lot in quite a few places, but it does work and you can play it and build your own levels as soon as you've built it yourself :)
 
 ## Tech used.
 C# with Win2D targeting the Windows modern platform. It can be built for Windows 8, 8.1 and Windows 10 as well as for Windows Phone 8, 8.1 and Windows Mobile 10.
